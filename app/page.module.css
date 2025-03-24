@@ -1,0 +1,92 @@
+/* 容器樣式 */
+.container {
+  width: 80%;
+  margin: 6rem auto;
+  font-family: Arial, sans-serif;
+}
+
+/* 按鈕群組 */
+.buttonGroup {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+
+/* Add 按鈕 */
+.addButton {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  font-size: 1.6rem;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+/* Save 按鈕 */
+.saveButton {
+  background-color: #1d8553;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  font-size: 1.6rem;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+/* Update 按鈕 */
+.updateButton {
+  background-color: #dc3545;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  font-size: 1.6rem;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+/* 表格標題樣式 */
+.tableHeader {
+  padding: 10px 2px;
+  border-bottom: 1px solid #ddd;
+  text-align: left;
+}
+
+/* 表格樣式 */
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 3rem;
+}
+
+/* 輸入框 */
+.input {
+  width: 76%;
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  font-size: 1.4rem;
+  margin: 6px 0px;
+}
+
+/* 薪水範圍滑桿 */
+.slider {
+  width: 76%;
+}
+
+.divider {
+  border-bottom: 1px solid #ddd;
+}
+
+/* 按鈕 hover 效果 */
+.addButton:hover {
+  background-color: #0056b3;
+}
+
+.saveButton:hover {
+  background-color: #1a7f4f;
+}
+
+.updateButton:hover {
+  background-color: #c82333;
+}
