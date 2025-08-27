@@ -29,7 +29,7 @@
 程式中會呼叫的 API endpoint 包含：
 
 ### 取得資料 fetchData()
-**GET** `請將 endpoint 改成你自己的 API 網址`
+**GET** `請將 endpoint 改成你自己的 API 網址，fetchData() 中的 url 變數`
 
 **回傳範例**
 ```json
@@ -52,9 +52,9 @@
 ```
 
 ### 新增資料 saveData()
-**POST** `請將 endpoint 改成你自己的 API 網址`
+**POST** `請將 endpoint 改成你自己的 API 網址，saveData() 中的 url 變數`
 
-Request Body
+**Request Body 範例**
 ```json
 [
   {
