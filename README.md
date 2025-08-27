@@ -1,36 +1,78 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# employee-form-next.js
 
-## Getting Started
+## 專案簡介
 
-First, run the development server:
+使用 Next.js 製作的簡易資料表應用程式，用戶可以透過 UI 新增資料、呼叫外部 API 儲存，並將 API 回傳的資料渲染在畫面上。
+
+## 功能列表
+- 透過 `Update` 按鈕，從外部 API 取得資料並顯示
+- 透過 `Add` 按鈕，新增輸入列
+- 透過 `Save` 按鈕，將新增的輸入列內容送到外部 API
+- 資料欄位包含：
+  - 姓名 (Name)
+  - 生日 (Birthday)
+  - 薪水 (Salary，使用 range slider)
+  - 地址 (Address)
+
+## 使用技術
+- Next.js (App Router, Client Component)
+- React (React Hooks)
+- Fetch API
+
+## API 使用方式
+
+⚠️ **注意：此專案僅實作前端，沒有內建 API。**  
+若要測試功能，請自行準備一個外部 API，並將 endpoint 填入程式碼。
+
+程式中會呼叫的 API endpoint 包含：
+
+### 取得資料 fetchData()
+**GET** `https://your-api-endpoint.com/data`
+
+**回傳範例**
+```json
+[
+  {
+    "name": "John Doe",
+    "birthday": "1995-01-01",
+    "salary": 50000,
+    "address": "Taipei"
+  },
+  {
+    "name": "Jane Smith",
+    "birthday": "1990-05-12",
+    "salary": 60000,
+    "address": "Kaohsiung"
+  }
+]
+```
+
+### 新增資料 saveData()
+**POST** `https://your-api-endpoint.com/data`
+
+**回傳範例**
+Request Body
+```json
+{
+  "name": "Alice Chen",
+  "birthday": "1998-09-09",
+  "salary": 45000,
+  "address": "Taichung"
+}
+```
+
+### 安裝套件
+
+```bash
+npm install
+```
+
+### 啟動開發環境
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 授權
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+此專案僅作為學習與展示用途。
